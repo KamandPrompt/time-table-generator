@@ -6,15 +6,15 @@ $time = array
  $days =array( "Monday","Tuesday","Wednesday","Thursday","Friday");
 $ftime = array
   (
-  array("<div class=\"csc A\">CS208</div>","<div class=B>IC130</div>","<div class=C>IC136</div>","<div class=D>IC221</div>","L","<div class=G>IC260</div><div class=\"hs_2 G\">HS352</div>","<div class=H>IC250</div><div class=\"H hs_4\">HS391</div>","<div class=\"mec L1 hs_5\">ME205</div>","<div class=\"mec L1 hs_5\">ME205</div>","<div class=\"mec L1 hs_5\">ME205</div>",""),
+  array("<div class=\"A3 A4\"></div>","<div class=\"B3 B4\"></div>","<div class=\"C3 C4\"></div>","<div class=\"D3 D4\"></div>","L","<div class=\"G3 G4\"></div>","<div class=\"H3 H4\"></div><div class=L1></div>","<div class=L1></div>","<div class=L1></div>",""),
   
-  array("<div class=E>IC240</div><div class=\"E hs_1\">HS301</div>","<div class=F>IC241</div><div class=\"F hs_3\">HS344</div><div class=\"F hs_6\">HS105</div>","<div class=G>IC260</div><div class=\"hs_2 G\">HS352</div>","<div class=\"H hs_4\">HS391</div>","U","<div class=\"csc A\">CS208</div>","<div class=L2>IC122P<br>IC130P<br>IC250</div>","<div class=L2>IC122P<br>IC130P<br>IC250</div>","<div class=L2>IC122P<br>IC130P<br>IC250</div>","",""),
+  array("<div class=\"E3 E4\"></div>","<div class=\"F3 F4\"></div>","<div class=\"G3 G4\"></div>","<div class=\"H3 H4\"></div>","U","<div class=A4></div>","<div class=L2></div><div class=C4></div>","<div class=L2></div>","<div class=L2></div>","",""),
   
-  array("<div class=B>IC130</div>","<div class=C>IC136</div>","<div class=D>IC221</div>","<div class=\"csc A\">CS208</div>","N","<div class=F>IC241</div><div class=\"F hs_3\">HS344</div><div class=\"F hs_6\">HS105</div>","<div class=L3>IC122P<br>IC130P<br>IC250</div>","<div class=L3>IC122P<br>IC130P<br>IC250</div>","<div class=L3>IC122P<br>IC130P<br>IC250</div>","",""),
+  array("<div class=\"B3 B4\"></div>","<div class=\"C3 C4\"></div>","<div class=\"D3 D4\"></div>","<div class=\"A3 A4\"></div>","N","<div class=\"F3 F4\"></div>","<div class=L3></div><div class=G4></div>","<div class=L3></div><div class=E4></div>","<div class=L3></div><div class=H4></div>","",""),
 
-  array("<div class=F>IC241</div><div class=\"F hs_3\">HS344</div><div class=\"F hs_6\">sHS105</div>","<div class=E>IC240</div><div class=\"E hs_1\">HS301</div>","<div class=\"H hs_4\">HS391</div>","<div class=G>IC260</div><div class=\"hs_2 G\">HS352</div>","C","<div class=\"csc L5\">CS207(Class)</div>","<div class=L4>IC122P<br>IC130P<br>IC250</div>","<div class=L4>IC122P<br>IC130P<br>IC250</div>","<div class=L4>IC122P<br>IC130P<br>IC250</div>","","") ,
+  array("<div class=\"F3 F4\"></div>","<div class=\"E3 E4\"></div>","<div class=\"H3 H4\"></div>","<div class=\"G3 G4\"></div>","C","<div class=D4></div>","<div class=L4></div><div class=B4></div>","<div class=L4></div>","<div class=L4></div>","","") ,
 
-  array("<div class=C>IC136</div>","<div class=D>IC221</div>","<div class=\"csc A\">CS208</div>","<div class=B>IC130</div>","H","<div class=E>IC240</div><div class=\"E hs_1\">HS301</div>","<div class=\"csc L5\">CS207</div>","<div class=\"csc L5\">CS207</div>","<div class=\"mec L5 hs_5\">ME205</div><div class=\"csc L5\">CS207</div>","<div class=\"mec L5 hs_5\">ME205</div>","<div class=\"mec L5 hs_5\">ME205</div>")
+  array("<div class=\"C3 C4\"></div>","<div class=\"D3 D4\"></div>","<div class=\"A3 A4\"></div>","<div class=\"B3 B4\"></div>","H","<div class=\"E3 E4\"></div>","<div class=F4></div>","<div class=L5></div>","<div class=L5></div>","","")
   );
  echo "<table><tr>";  
   for($i=0;$i<12;$i++)
@@ -24,7 +24,7 @@ $ftime = array
   for($i=0;$i<5;$i++)
     { echo "<tr><th>".$days[$i]."</th>";
       for($j=0;$j<11;$j++){
-        echo "<td>".$ftime[$i][$j]."</td>";
+        echo "<td> </td>";
       }
     echo "</tr>";
       
@@ -128,6 +128,10 @@ $courses=array(
 	array("IC136","C3"),
 	array("IC221","D3"),
 	array("",""));
+	echo "<select>List of courses";
+	for($i=0;$i<87;$i++)
+	       echo "<option>".$courses[$i][0]."</option>";
+    echo "</select>";
 ?>
 <html>
   <head>
