@@ -24,7 +24,7 @@ $ftime = array
   for($i=0;$i<5;$i++)
     { echo "<tr><th>".$days[$i]."</th>";
       for($j=0;$j<11;$j++){
-        echo "<td> </td>";
+        echo "<td></td>";
       }
     echo "</tr>";
       
@@ -128,10 +128,10 @@ $courses=array(
 	array("IC136","C3"),
 	array("IC221","D3"),
 	array("",""));
-	echo "<select>List of courses";
+	echo "List of courses<br><select id=clist value=hello>";
 	for($i=0;$i<87;$i++)
-	       echo "<option>".$courses[$i][0]."</option>";
-    echo "</select>";
+	       echo "<option class=".$courses[$i][1]." value=".$courses[$i][0].">".$courses[$i][0]."</option>";
+    echo "</select><br>";
 ?>
 <html>
   <head>
@@ -142,108 +142,18 @@ $courses=array(
   <link rel="stylesheet" type="text/css" href="design.css">
   </head>
   <body>
-  <label><strong>Electives</strong> </label>: <br>
-  <input type=checkbox id='hs1'>HS301 <br>
-  <input type=checkbox id='hs2'>HS352 <br>
-  <input type=checkbox id='hs3'>HS344 <br>
-  <input type=checkbox id='hs4'>HS391 <br>
-  <input type=checkbox id='hs5'>ME205 <br>
-  <input type=checkbox id='hs6'>HS105 <br>
-  <label><strong>Year</strong><label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 
-  <a href=imp.php><input type= radio name='year' id=i>I'st Year</a>
-  <a><input type= radio name='year' id=ii checked=checked>II'nd Year</a>
-  <a href=third.php><input type= radio name='year' id=iii>III'rd Year</a>
-  <a href=fourth.php><input type= radio name='year' id=iv >IV'th Year</a><br>
-  <label><strong>Branch</strong><label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<br>
-  <input type= radio name='branch' value=cse>CSE<br>
-  <input type= radio name='branch' value=me >ME<br>
-  <input type= radio name='branch' value=ee>EE<br>
-  <input type= radio name='branch' value=ce >CE<br>
+  <div class=container>
+  	<ul id=crss>
+  	</ul>
+  </div>
 <script>
-
-$(document).ready(function(){
-  $('.hs_1').hide();
-  $('.hs_2').hide();
-  $('.hs_3').hide();
-  $('.hs_4').hide();
-  $('.hs_5').hide();
-  $('.hs_6').hide();
-  $('.csc').hide();
-  $('.eec').hide();
-  $('.mec').hide();
-  $('.cec').hide();
-
+$('#clist').change(function(){
+	$('#crss').append("<li>"+$('#clist option:selected').val()+"</li>");
+	var slot=$('#clist option:selected').attr('class');
+	$("."+slot).append(''+$('#clist option:selected').val());
 });
-$('#hs1').change(function(){
-  if($(this).prop('checked'))
-    $('.hs_1').show() ; // checked
-else
-    $('.hs_1').hide();  // unchecked
-});
-$('#hs2').change(function(){
-  if($(this).prop('checked'))
-    $('.hs_2').show() ; // checked
-else
-    $('.hs_2').hide();  // unchecked
-});
-$('#hs3').change(function(){
-  if($(this).prop('checked'))
-    $('.hs_3').show() ; // checked
-else
-    $('.hs_3').hide();  // unchecked
-});
-$('#hs4').change(function(){
-  if($(this).prop('checked'))
-    $('.hs_4').show() ; // checked
-else
-    $('.hs_4').hide();  // unchecked
-});
-$('#hs5').change(function(){
-  if($(this).prop('checked'))
-    $('.hs_5').show() ; // checked
-else
-    $('.hs_5').hide();  // unchecked
-});
-$('#hs6').change(function(){
-  if($(this).prop('checked'))
-    $('.hs_6').show() ; // checked
-else
-    $('.hs_6').hide();  // unchecked
-});
-$('input[name=branch]').change(function(){
-   value=""+$('input[name=branch]:checked').val();
-   if(value=="cse") {
-    $('.csc').show();
-    $('.eec').hide();
-  $('.mec').hide();
-  $('.cec').hide();
-   }
-   if(value=="ce") {
-    $('.cec').show();
-    $('.eec').hide();
-  $('.mec').hide();
-  $('.csc').hide();
-   }
-   if(value=="me") {
-    $('.mec').show();
-    $('.eec').hide();
-  $('.csc').hide();
-  $('.cec').hide();
-   }
-   if(value=="ee") {
-    $('.eec').show();
-    $('.csc').hide();
-  $('.mec').hide();
-  $('.cec').hide();
-   }
-
-      // unchecked
-
-});
-
 </script>
   </body>
 </html>
-
 
 
