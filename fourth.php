@@ -17,13 +17,13 @@ $ftime = array
   array("<div class=\"C3 C4\"></div>","<div class=\"D3 D4\"></div>","<div class=\"A3 A4\"></div>","<div class=\"B3 B4\"></div>","H","<div class=\"E3 E4\"></div>","<div class=F4></div>","<div class=L5></div>","<div class=L5></div>","","")
   );
  echo "<table id=tt><tr>";  
-  for($i=0;$i<12;$i++)
+  for($i=0;$i<10;$i++)
     echo "<th>".$time[$i]."</th>";
    echo "</tr>";
 
   for($i=0;$i<5;$i++)
     { echo "<tr><th>".$days[$i]."</th>";
-      for($j=0;$j<11;$j++){
+      for($j=0;$j<9;$j++){
         echo "<td>".$ftime[$i][$j]."</td>";
       }
     echo "</tr>";
@@ -115,7 +115,8 @@ $courses=array(
 	array("ME601","C3"),
 	array("ME602","H3"),
 	array("ME603","B3"),
-	array("ME606","D3"),
+
+	array("ME205(3.00-6.00)","L1"),	array("ME606","D3"),
 	array("ME638","D3"),
 	array("ME205(3.00-6.00)","L1"),
 	array("ME311P","L3"),
@@ -163,7 +164,7 @@ $courses=array(
 	array("","")
 	);
 	echo "List of courses<br><select id=clist>";
-	for($i=0;$i<7;$i++)
+	for($i=0;$i<95;$i++)
 	       echo "<option class=".$courses[$i][1]." value=".$courses[$i][0].">".$courses[$i][0]."</option>";
     echo "</select><br>";
 ?>
@@ -202,6 +203,5 @@ $('#clist').change(function(){
 </script>
   </body>
 </html>
-
 
 
