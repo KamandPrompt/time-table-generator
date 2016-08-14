@@ -1,22 +1,22 @@
         a,a:hover,a:visited,a:link{text-decoration:none;color:black;}
         table{border-collapse: collapse;}
         tr,th,td {border:2px solid black;text-align: center;margin:0px;}
-        .A{background-color: #40B4F6;}
-        .B{background-color: #F19345;}
-        .C{background-color: #51FFF0;}
-        .D{background-color: #2AE783;}
-        .E{background-color: #91CCC0;}
-        .F{background-color: #B1FFF1;}
-        .G{background-color: #F0DDD0;}
-        .H{background-color: #FF2AAA}
-        .L1{background-color: #40B4F6;}
-        .L2{background-color: #F19345;}
-        .L3{background-color: #51FFF0;}
-        .L4{background-color: #2AE783;}
-        .L5{background-color: #91CCC0;}
-        .L6{background-color: #B1FFF1;}
-        .L7{background-color: #F0DDD0;}
-        .L8{background-color: #A1FFA0;}
-        .L9{background-color: #C59F7F;}
+        .A{background-color: #40B4F6; font-family: Arial;}
+        .B{background-color: #F19345; font-family: Arial;}
+        .C{background-color: #51FFF0; font-family: Arial;}
+        .D{background-color: #2AE783; font-family: Arial;}
+        .E{background-color: #91CCC0; font-family: Arial;}
+        .F{background-color: #B1FFF1; font-family: Arial;}
+        .G{background-color: #F0DDD0; font-family: Arial;}
+        .H{background-color: #FF2AAA; font-family: Arial;}
+        .L1{background-color: #40B4F6; font-family: Arial;}
+        .L2{background-color: #F19345; font-family: Arial;}
+        .L3{background-color: #51FFF0; font-family: Arial;}
+        .L4{background-color: #2AE783; font-family: Arial;}
+        .L5{background-color: #91CCC0; font-family: Arial;}
+        .L6{background-color: #B1FFF1; font-family: Arial;}
+        .L7{background-color: #F0DDD0; font-family: Arial;}
+        .L8{background-color: #A1FFA0; font-family: Arial;}
+        .L9{background-color: #C59F7F; font-family: Arial;}
         
         
