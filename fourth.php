@@ -182,6 +182,11 @@ $courses=array(
   	<div class=jumbotron><h2><img src=logo_iit1.png class=small>IInd,IIIrd,IVth Year B.Tech and MTech(Mechanical/Energy)</h2></div>
   	<ul id=crss>
   	</ul>
+  	<h2>Notes</h2><br>
+  	<ul type="square">
+  		<li>All the courses of the course list have not been mentioned in the Time-Table Generator. This is because of unavailability of slots for those course in the time-table. For some specific courses, whose slots have been assigned and are not available in the time-table, they can contact the developers or the admin to add the course.</li>
+  		<li>
+  	</ul>
   </div>
 <script>
 
