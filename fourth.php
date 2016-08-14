@@ -35,11 +35,19 @@ $courses=array(
 	array("IC241","F3"),
 	array("IC260","G3"),
 	array("IC250","H3"),
-	array("CS208","A4"),
 	//array("CE201","3"),
 	array("IC130","B3"),
 	array("IC136","C3"),
 	array("IC221","D3"),
+	array("IC250(TUE)","L2"),
+	array("IC130P(TUE)","L2"),
+	array("IC222P(TUE)","L2"),
+	array("IC250(WED)","L3"),
+	array("IC130P(WED)","L3"),
+	array("IC222P(WED)","L3"),
+	array("IC250(THU)","L4"),
+	array("IC130P(THU)","L4"),
+	array("IC222P(THU)","L4"),
 
 	array("HS105","F3"),
 	array("HS263","H3"),
@@ -62,8 +70,7 @@ $courses=array(
 	//array("HS621","4"),
 	//array("HS623","4"),
 	
-	array("CS201","B3"),
-	array("CS310","C3"),
+	
 
 	array("EE311","A3"),
 	array("EE304","C4"),
@@ -74,23 +81,31 @@ $courses=array(
 	array("ME308","C3"),
 	array("ME305","A4"),
 	
+	array("CS201","B3"),
+	array("CS310","C3"),
 	array("CS303","E3"),
 	array("CS305","G3"),
 	array("CS304","H3"),
 	array("CS699","F4"),
 	array("CS601","D4"),
 	array("CS609","A4"),
+	array("CS208","A4"),
+	array("CS308","L1"),
+    array("CS310(LAB)","L2"),
+    array("CS207(2.00-5.00)","L5"),
+    array("CS201P","L5"),
 	
 	array("EE608","B4"),
 	array("EE615","G3"),
 	array("EE508","G3"),
 	array("EE509","D3"),
-	
 	array("EE620","C3"),
 	array("EE606","E3"),
 	array("EE609","H3"),
 	array("EE512","E4"),
 	array("EE518","D3"),
+	array("EE312","L1"),
+	array("EE304","L2"),
 	//array("EE520","3"),
 	//array("EE513","3"),
 	
@@ -102,6 +117,10 @@ $courses=array(
 	array("ME603","B3"),
 	array("ME606","D3"),
 	array("ME638","D3"),
+	array("ME205(3.00-6.00)","L1"),
+	array("ME311P","L3"),
+	array("ME205(4.00-7.00)","L5"),
+	array("ME310P","L5"),
 	//array("ME616","3"),
 	//array("ME632","3"),
 	
@@ -141,12 +160,10 @@ $courses=array(
 	array("CE501","D3"),
 	array("CE601","A3"),
 	
-
-	
-	
-	array("",""));
+	array("","")
+	);
 	echo "List of courses<br><select id=clist>";
-	for($i=0;$i<75;$i++)
+	for($i=0;$i<7;$i++)
 	       echo "<option class=".$courses[$i][1]." value=".$courses[$i][0].">".$courses[$i][0]."</option>";
     echo "</select><br>";
 ?>
@@ -185,5 +202,6 @@ $('#clist').change(function(){
 </script>
   </body>
 </html>
+
 
 
