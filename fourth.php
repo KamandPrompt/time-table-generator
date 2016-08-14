@@ -6,7 +6,7 @@ $time = array
  $days =array( "Monday","Tuesday","Wednesday","Thursday","Friday");
 $ftime = array
   (
-  array("<div class=\"A3 A4\"></div>","<div class=\"B3 B4\"></div>","<div class=\"C3 C4\"></div>","<div class=\"D3 D4\"></div>","L","<div class=\"G3 G4\"></div>","<div class=\"H3 H4\"></div><div class=L1></div>","<div class=L1></div>","<div class=L1></div>",""),
+  array("<div class=\"A3 A4\"></div>","<div class=\"B3 B4\"></div>","<div class=\"C3 C4\"></div>","<div class=\"D3 D4\"></div>","L","<div class=\"G3 G4\"></div>","<div class=\"H3 H4\"></div><div class=L1></div>","<div class=L1></div>","<div class=L1></div>","",""),
   
   array("<div class=\"E3 E4\"></div>","<div class=\"F3 F4\"></div>","<div class=\"G3 G4\"></div>","<div class=\"H3 H4\"></div>","U","<div class=A4></div>","<div class=L2></div><div class=C4></div>","<div class=L2></div>","<div class=L2></div>","",""),
   
@@ -16,7 +16,7 @@ $ftime = array
 
   array("<div class=\"C3 C4\"></div>","<div class=\"D3 D4\"></div>","<div class=\"A3 A4\"></div>","<div class=\"B3 B4\"></div>","H","<div class=\"E3 E4\"></div>","<div class=F4></div>","<div class=L5></div>","<div class=L5></div>","","")
   );
- echo "<table><tr>";  
+ echo "<table id=tt><tr>";  
   for($i=0;$i<12;$i++)
     echo "<th>".$time[$i]."</th>";
    echo "</tr>";
@@ -24,47 +24,76 @@ $ftime = array
   for($i=0;$i<5;$i++)
     { echo "<tr><th>".$days[$i]."</th>";
       for($j=0;$j<11;$j++){
-        echo "<td></td>";
+        echo "<td>".$ftime[$i][$j]."</td>";
       }
     echo "</tr>";
       
       }echo "</table>";?>
 <?php
 $courses=array(
+	array("IC240","E3"),
+	array("IC241","F3"),
+	array("IC260","G3"),
+	array("IC250","H3"),
+	array("CS208","A4"),
+	//array("CE201","3"),
+	array("IC130","B3"),
+	array("IC136","C3"),
+	array("IC221","D3"),
+
 	array("HS105","F3"),
 	array("HS263","H3"),
 	array("HS255","D3"),
 	array("HS502","E3"),
 	array("HS352","G3"),
+    array("HS205","D3"),
+	array("HS350","G3"),
+	array("HS343","H3"),
+	array("HS403","G3"),
+	array("HS471","E3"),
+	array("HS472","F3"),
+	array("HS481","F3"),
+	array("HS582","A3"),
+	array("HS602","B3"),
+	array("HS620","C3"),
+	array("HS391","H3"),
+	//array("HS611","3"),
+	//array("HS522","3"),
+	//array("HS621","4"),
+	//array("HS623","4"),
+	
 	array("CS201","B3"),
 	array("CS310","C3"),
+
 	array("EE311","A3"),
 	array("EE304","C4"),
 	array("EE305","H4"),
+
 	array("ME206","A3"),
 	array("ME303","B3"),
 	array("ME308","C3"),
 	array("ME305","A4"),
+	
 	array("CS303","E3"),
 	array("CS305","G3"),
 	array("CS304","H3"),
 	array("CS699","F4"),
 	array("CS601","D4"),
-	array("HS205","D3"),
-	array("HS350","G3"),
 	array("CS609","A4"),
+	
 	array("EE608","B4"),
 	array("EE615","G3"),
 	array("EE508","G3"),
 	array("EE509","D3"),
-	array("HS391","H3"),
-	array("EE520","3"),
+	
 	array("EE620","C3"),
 	array("EE606","E3"),
 	array("EE609","H3"),
 	array("EE512","E4"),
-	array("EE513","3"),
 	array("EE518","D3"),
+	//array("EE520","3"),
+	//array("EE513","3"),
+	
 	array("ME351","G3"),
 	array("ME356","D4"),
 	array("ME509","E3"),
@@ -72,22 +101,18 @@ $courses=array(
 	array("ME602","H3"),
 	array("ME603","B3"),
 	array("ME606","D3"),
-	array("ME616","3"),
-	array("ME632","3"),
 	array("ME638","D3"),
-	array("HS343","H3"),
-	array("HS403","G3"),
-	array("HS471","E3"),
-	array("HS472","F3"),
-	array("HS481","F3"),
-	array("HS582","A3"),
-	array("HS611","3"),
-	array("HS522","3"),
+	//array("ME616","3"),
+	//array("ME632","3"),
+	
+	
 	array("EN501","E3"),
 	array("EN502","F3"),
 	array("EN503","C3"),
-	array("EN604","3"),
-	array("EN511","3"),
+	//array("EN604","3"),
+	//array("EN511","3"),
+	//array("EN508","3"),
+
 	array("MA465","D3"),
 	array("MA605","G3"),
 	array("BY505","H3"),
@@ -95,44 +120,37 @@ $courses=array(
 	array("BY506","C3"),
 	array("BY507","4"),
 	array("BY508","C3"),
-	array("BY510","3"),
-	array("BY511","3"),
-	array("BY512","3"),
-	array("BY513","3"),
+	//array("BY510","3"),
+	//array("BY511","3"),
+	//array("BY512","3"),
+	//array("BY513","3"),
 	array("PH502","G3"),
 	array("PH506","D3"),
 	array("PH511","G4"),
 	array("PH512","H4"),
 	array("PH513","F3"),
-	array("PH514","3"),
 	array("PH601","E3"),
-	array("PH611","4"),
 	array("PH613","F3"),
-	array("PH701","4"),
-	array("CY514","3"),
-	array("CY522","3"),
+	//array("PH514","3"),
+	//array("PH611","4"),
+	//array("PH701","4"),
+
+	//array("CY514","3"),
+	//array("CY522","3"),
+	
 	array("CE501","D3"),
 	array("CE601","A3"),
-	array("EN508","3"),
-	array("HS602","B3"),
-	array("HS620","C3"),
-	array("HS621","4"),
-	array("HS623","4"),
-	array("IC240","E3"),
-	array("IC241","F3"),
-	array("IC260","G3"),
-	array("IC250","H3"),
-	array("CS208","A4"),
-	array("CE201","3"),
-	array("IC130","B3"),
-	array("IC136","C3"),
-	array("IC221","D3"),
+	
+
+	
+	
 	array("",""));
-	echo "List of courses<br><select id=clist value=hello>";
-	for($i=0;$i<87;$i++)
+	echo "List of courses<br><select id=clist>";
+	for($i=0;$i<75;$i++)
 	       echo "<option class=".$courses[$i][1]." value=".$courses[$i][0].">".$courses[$i][0]."</option>";
     echo "</select><br>";
 ?>
+
 <html>
   <head>
   <meta charset="utf-8">
@@ -140,6 +158,11 @@ $courses=array(
   <script type="text/javascript" src=js/jquery.min.js></script>
   <script type="text/javascript" src=js/send.js></script>
   <link rel="stylesheet" type="text/css" href="design.css">
+  <style type="text/css">#clist {font-size:20px;}
+         option {padding:5px;text-align:center;}
+         tr{font-size: 25px;}
+         </style>
+
   </head>
   <body>
   <div class=container>
@@ -147,11 +170,18 @@ $courses=array(
   	</ul>
   </div>
 <script>
+
 $('#clist').change(function(){
-	$('#crss').append("<li>"+$('#clist option:selected').val()+"</li>");
+	var copt=$('#clist option:selected').val()
+	$('#crss').append("<li>"+copt+"</li>");
 	var slot=$('#clist option:selected').attr('class');
-	$("."+slot).append(''+$('#clist option:selected').val());
+	$("."+slot).not("option").html(""+copt);
+	//$('#clist option[value="'+copt+'"]').remove();
 });
+//$('.bcls').click(function(){
+//	var slot=$(this).attr('class');
+//	$('.'+slot).remove();
+//});
 </script>
   </body>
 </html>
