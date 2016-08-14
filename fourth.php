@@ -1,3 +1,4 @@
+
 <?php 
 $time = array
   (
@@ -15,20 +16,7 @@ $ftime = array
   array("<div class=\"F3 F4\"></div>","<div class=\"E3 E4\"></div>","<div class=\"H3 H4\"></div>","<div class=\"G3 G4\"></div>","C","<div class=D4></div>","<div class=L4></div><div class=B4></div>","<div class=L4></div>","<div class=L4></div>","","") ,
 
   array("<div class=\"C3 C4\"></div>","<div class=\"D3 D4\"></div>","<div class=\"A3 A4\"></div>","<div class=\"B3 B4\"></div>","H","<div class=\"E3 E4\"></div>","<div class=F4></div>","<div class=L5></div>","<div class=L5></div>","","")
-  );
- echo "<table id=tt><tr>";  
-  for($i=0;$i<10;$i++)
-    echo "<th>".$time[$i]."</th>";
-   echo "</tr>";
-
-  for($i=0;$i<5;$i++)
-    { echo "<tr><th>".$days[$i]."</th>";
-      for($j=0;$j<9;$j++){
-        echo "<td>".$ftime[$i][$j]."</td>";
-      }
-    echo "</tr>";
-      
-      }echo "</table>";?>
+  );?>
 <?php
 $courses=array(
 	array("IC240","E3"),
@@ -163,7 +151,8 @@ $courses=array(
 	
 	array("","")
 	);
-	echo "List of courses<br><select id=clist>";
+	
+  echo "List of courses<br><select id=clist>";
 	for($i=0;$i<95;$i++)
 	       echo "<option class=".$courses[$i][1]." value=".$courses[$i][0].">".$courses[$i][0]."</option>";
     echo "</select><br>";
@@ -174,16 +163,23 @@ $courses=array(
   <meta charset="utf-8">
   
   <script type="text/javascript" src=js/jquery.min.js></script>
+  <script type="text/javascript" src=content/js/bootstrap.min.js></script>
+  <link rel="stylesheet" type="text/css" href="content/css/bootstrap.min.css">
   <script type="text/javascript" src=js/send.js></script>
   <link rel="stylesheet" type="text/css" href="design.css">
   <style type="text/css">#clist {font-size:20px;}
+
          option {padding:5px;text-align:center;}
-         tr{font-size: 25px;}
+         tr{font-size: 20px;}
+         .jumbotron{background-color:#00F4F4;color:;text-align: center;font-family:monospace;background-image:radial-gradient(#00F4F4,#119191);}
+         .small{width:15%;height:15%;}
+         .tt{width:70%;height:70%;}
          </style>
 
   </head>
   <body>
   <div class=container>
+  	<div class=jumbotron><h2><img src=logo_iit1.png class=small>IInd,IIIrd,IVth Year B.Tech and MTech(Mechanical/Energy)</h2></div>
   	<ul id=crss>
   	</ul>
   </div>
@@ -191,17 +187,32 @@ $courses=array(
 
 $('#clist').change(function(){
 	var copt=$('#clist option:selected').val()
-	$('#crss').append("<li>"+copt+"</li>");
 	var slot=$('#clist option:selected').attr('class');
+	$('#crss').append("<li>"+copt+"</li><button>X</button>");
 	$("."+slot).not("option").html(""+copt);
 	//$('#clist option[value="'+copt+'"]').remove();
 });
 //$('.bcls').click(function(){
-//	var slot=$(this).attr('class');
-//	$('.'+slot).remove();
+//var slot=$(this).attr('class');
+//$("."+slot).not("option").html(" ");
 //});
 </script>
   </body>
 </html>
 
+<?php
 
+ echo "<table id=tt><tr>";  
+  for($i=0;$i<10;$i++)
+    echo "<th>".$time[$i]."</th>";
+   echo "</tr>";
+
+  for($i=0;$i<5;$i++)
+    { echo "<tr><th>".$days[$i]."</th>";
+      for($j=0;$j<9;$j++){
+        echo "<td>".$ftime[$i][$j]."</td>";
+      }
+    echo "</tr>";
+      
+      }echo "</table>";
+?>
