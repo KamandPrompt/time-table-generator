@@ -8,15 +8,76 @@ $ftime = array
   (
   array("<div class=A>IC110</div>","<div class=B>IC140</div>","<div class=C>IC150</div>","<div class=D>IC160</div>","","","",""),
   
-  array(" ","<div class=L6>IC150P<br>IC160P<br>IC140<br>IC101P</div>","<div class=L6>IC150P<br>IC160P<br>IC140<br>IC101P</div>","<div class=L6>IC150P<br>IC160P<br>IC140<br>IC101P</div>"," "," "," ","<div class=\"hs_1 H\">HS106</div>"),
+  array(" ","<div class=L6>IC150P<br>IC160P<br>IC140<br>IC101P</div>","<div class=L6>IC150P<br>IC160P<br>IC140<br>IC101P</div>","<div class=L6>IC150P<br>IC160P<br>IC140<br>IC101P</div>"," "," "," ","<div class=\"hs_elec H\">HS106</div>"),
   
   array("<div class=B>IC140</div>","<div class=L7>IC150P<br>IC160P<br>IC140<br>IC101P</div>","<div class=L7>IC150P<br>IC160P<br>IC140<br>IC101P</div>","<div class=L7>IC150P<br>IC160P<br>IC140<br>IC101P</div>"," ","<div class=C>IC150</div>","<div class=D>IC160</div>","<div class=A>IC110</div>"),
 
-  array(" ","<div class=L8>IC150P<br>IC160P<br>IC140<br>IC101P</div>","<div class=L8>IC150P<br>IC160P<br>IC140<br>IC101P</div>","<div class=L8>IC150P<br>IC160P<br>IC140<br>IC101P</div>"," ","","<div class=\"hs_1 H\">HS106</div>"," ") ,
+  array(" ","<div class=L8>IC150P<br>IC160P<br>IC140<br>IC101P</div>","<div class=L8>IC150P<br>IC160P<br>IC140<br>IC101P</div>","<div class=L8>IC150P<br>IC160P<br>IC140<br>IC101P</div>"," ","","<div class=\"hs_elec H\">HS106</div>"," ") ,
 
   array("<div class=C>IC150</div>","<div class=L9>IC150P<br>IC160P<br>IC140<br>IC101P</div>","<div class=L9>IC150P<br>IC160P<br>IC140<br>IC101P</div>","<div class=L9>IC150P<br>IC160P<br>IC140<br>IC101P</div>"," ","<div class=D>IC160</div>","<div class=A>IC110</div>","<div class=B>IC140</div>"),
   );
- echo "<table><tr>";  
+ ?>
+
+<html>
+  <head>
+  <meta charset="utf-8">
+  <title>Timetable Generator</title>
+  <script type="text/javascript" src=js/jquery.min.js></script>
+  <link rel="stylesheet" type="text/css" href="design.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.2.0/material.indigo-pink.min.css">
+<script defer src="https://code.getmdl.io/1.2.0/material.min.js"></script>
+<link rel="stylesheet" type="text/css" href="design.css">
+<style type="text/css">
+    
+  .jumbotron{background-color:#00F4F4;color:;text-align: center;font-family:monospace;background-image:radial-gradient(#00F4F4,#119191); padding: 20px;}
+         .small{width:15%;height:15%;}
+         table{margin:auto;padding:auto;}
+         input{margin-right:300px;}
+</style>
+
+  </head>
+  <body>
+  
+  
+ <!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">I<sup>st</sup> Year</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      <!--<nav class="mdl-navigation mdl-layout-large-screen-only">
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+      </nav>-->
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Batch</span>
+    <nav class="mdl-navigation">
+    <a class="mdl-navigation__link" href="index.php">Home</a>
+      <a class="mdl-navigation__link" href="imp.php">I<sup>st</sup> Year</a>
+      <a class="mdl-navigation__link" href="fourth.php">II<sup>nd</sup>,III<sup>rd</sup>, IV<sup>th</sup> Year and M. Tech.</a>
+      <a class="mdl-navigation__link" href="mscc2016.php">M. Sc.</a>
+      
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content"><!-- Your content goes here -->
+    
+    <div class=jumbotron><br><br><h2><img src=logo_iit1.png class=small> B. Tech.</h2>
+    I<sup>st</sup> Year
+    </div>
+
+<br>
+<br><br>
+  <?php
+echo "<table><tr>";  
   for($i=0;$i<9;$i++)
     echo "<th>".$time[$i]."</th>";
    echo "</tr>";
@@ -28,31 +89,36 @@ $ftime = array
       }
     echo "</tr>";
       
-      }echo "</table>";?>
+      }echo "</table>";
+?>
+  
+  <div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet"></div>
+  <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet">
+  <b>Electives:</b><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="hselec">
+  <input type="checkbox" id="hselec" class="mdl-checkbox__input hselec">
+  <span class="mdl-checkbox__label">HS106</span>
+</label>
+</div>
+  <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone"></div>
+</div>
 
-<html>
-  <head>
-  <meta charset="utf-8">
-  <script type="text/javascript" src=js/jquery.min.js></script>
-  <link rel="stylesheet" type="text/css" href="design.css">
-  </head>
-  <body>
-  <label><strong>Electives</strong> </label>: <input type=checkbox id='hs1' class=hs1>HS106 <br>
-  <label><strong>Year</strong><label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 
-  <a ><input type= radio name='year' id=i checked=checked>I'st Year</a>
-  <a href=second.php><input type= radio name='year' id=ii>II'nd Year</a>
-  <a href=third.php><input type= radio name='year' id=iii>III'rd Year</a>
-  <a href=fourth.php><input type= radio name='year' id=iv >IV'th Year</a><br>
+</div>
+  </main>
+</div>
+<br><br>
+
+  
   <script>
 
 $(document).ready(function(){
-  $('.hs_1').hide();
+  $('.hs_elec').hide();
 });
-$('.hs1').change(function(){
+$('.hselec').change(function(){
   if($(this).prop('checked'))
-    $('.hs_1').show()  // checked
+    $('.hs_elec').show()  // checked
 else
-    $('.hs_1').hide();  // unchecked
+    $('.hs_elec').hide();  // unchecked
 });
 
 </script>
