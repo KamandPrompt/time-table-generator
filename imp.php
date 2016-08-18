@@ -1,7 +1,7 @@
 <?php 
 $time = array
   (
-  "","8:00-9:00 AM","9:00-10:00 AM","10:00-11:00 AM","11:00-12:00 PM","1:00-2:00 PM","2:00-3:00 PM","3:00-4:00","4:00-5:00"
+  "","8:00-9:00 AM","9:00-10:00 AM","10:00-11:00 AM","11:00-12:00 PM","1:00-2:00 PM","2:00-3:00 PM","3:00-4:00 PM","4:00-5:00 PM"
   );
  $days =array( "Monday","Tuesday","Wednesday","Thursday","Friday");
 $ftime = array
@@ -30,9 +30,7 @@ $ftime = array
 <link rel="stylesheet" type="text/css" href="design.css">
 <style type="text/css">
     
-  .jumbotron{background-color:#00F4F4;color:;text-align: center;font-family:monospace;background-image:radial-gradient(#00F4F4,#119191); padding: 20px;}
-         .small{width:15%;height:15%;}
-         table{margin:auto;padding:auto;}
+         
          input{margin-right:300px;}
 </style>
 
@@ -77,7 +75,7 @@ $ftime = array
 <br>
 <br><br>
   <?php
-echo "<table><tr>";  
+echo "<div class=tt><table><tr>";  
   for($i=0;$i<9;$i++)
     echo "<th>".$time[$i]."</th>";
    echo "</tr>";
@@ -89,7 +87,7 @@ echo "<table><tr>";
       }
     echo "</tr>";
       
-      }echo "</table>";
+      }echo "</table></div>";
 ?>
   
   <div class="mdl-grid">
@@ -102,7 +100,11 @@ echo "<table><tr>";
 </div>
   <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone"></div>
 </div>
-
+<b><i>Note:</i></b><ol>
+<li>Slots A3, B3, C3 and D3 are for 3 credit courses that can be used for core subjects.</li>
+<li>Slots A4, B4, C4, D4, E4, F4, G4 and I4 are for 4 credit elective courses, (used for core if needed).</li>
+<li>L1, L2, L3, L4, L5, L6, L7, L8, and L9 are the lab slots.</li>
+</ol>
 </div>
   </main>
 </div>

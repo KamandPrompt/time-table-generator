@@ -1,8 +1,8 @@
         
         a,a:hover,a:visited,a:link{text-decoration:none;color:black;}
-        table{border-collapse: collapse;}
+        
         tr,th,td {border:2px solid black;text-align: center;margin:0px;}
-         
+         table{border-collapse: collapse;margin:0px;}
         .A3,.A4,.A{background-color: #40B4F6;}
         .B3,.B4,.B{background-color: #F19345;}
         .C3,.C4,.C{background-color: #51FFF0;}
@@ -20,8 +20,20 @@
         .L7{background-color: #F0DDD0;}
         .L8{background-color: #A1FFA0;}
         .L9{background-color: #C59F7F;}
-        .jumbotron{background-color:#00F4F4;color:;text-align: center;font-family:monospace;background-image:radial-gradient(#00F4F4,#119191);}
+        
+        .jumbotron{background-color:#00F4F4;color:;text-align: center;font-family:sans-serif;
+        	background-image:radial-gradient(#00F4F4,#119191);}
          .small{width:15%;height:15%;}
+          #clist {font-size:16px;}
+  		  
+         option {text-align:center;}
+         tr,td,th{font-size:20px;border:2px solid purple;}
+         .small{width:15%;height:15%;}
+         .tt{border:17px solid green;border-radius: 15px;margin:auto;padding:0px;width:105%;}
+         .mdl-navigation{color:black;}
+         #headl{color:white;font-size:22px;}
+
+         
         
         
         

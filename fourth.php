@@ -154,16 +154,7 @@ $courses=array(
   <script type="text/javascript" src=js/send.js></script>
   <link rel="stylesheet" type="text/css" href="design.css">
   <style type="text/css">
-  		  #clist {font-size:16px;}
-  		  table{padding: 100px;}
-         option {text-align:center;}
-         tr,td,th{font-size:18px;}
-         .jumbotron{background-color:#00F4F4;color:;text-align: center;font-family:monospace;background-image:radial-gradient(#00F4F4,#119191);}
-         .small{width:15%;height:15%;}
-         .tt{width:70%;height:70%;margin:100px;}
-         .mdl-navigation{color:black;}
-         #headl{color:white;font-size:22px;}
-         .I3,.I4,.H{background-color: #FF2AAA;}
+  		 .tt{width:90%;}
          </style>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://code.getmdl.io/1.2.0/material.indigo-pink.min.css">
@@ -216,7 +207,7 @@ $courses=array(
   	</div>
   	<?php
 
- echo "<table id=tt><tr>";  
+ echo "<div class=tt><table class=\"table-responsive table-hover\"><tr>";  
   for($i=0;$i<10;$i++)
     echo "<th>".$time[$i]."</th>";
    echo "</tr>";
@@ -228,9 +219,11 @@ $courses=array(
       }
     echo "</tr>";
       
-      }echo "</table>";
+      }echo "</table></div>";
 ?>
-<br><br><br><br>
+<br><br>
+
+<br><br>
 <b><i>Note:</i></b><ol>
 <li>Slots A3, B3, C3 and D3 are for 3 credit courses that can be used for core subjects.</li>
 <li>Slots A4, B4, C4, D4, E4, F4, G4 and I4 are for 4 credit elective courses, (used for core if needed).</li>
