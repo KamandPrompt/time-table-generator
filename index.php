@@ -132,7 +132,7 @@ h4,h1{color:white;}
   </main>
   <div id="background"></div>
 
-<img src=128x128/Preloader_5.gif id=ldng>
+<img src=Preloader_5.gif id=ldng>
 <!--<div class="mdl-spinner mdl-js-spinner is-active">
 </div>-->
   <script>
