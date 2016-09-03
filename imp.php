@@ -23,13 +23,13 @@ $ftime = array
   <meta charset="utf-8">
   <title>Timetable Generator</title>
   <script type="text/javascript" src=js/jquery.min.js></script>
-  <link rel="stylesheet" type="text/css" href="design.css">
+  
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://code.getmdl.io/1.2.0/material.indigo-pink.min.css">
 <script defer src="https://code.getmdl.io/1.2.0/material.min.js"></script>
-<link rel="stylesheet" type="text/css" href="design.css">
+<link rel="stylesheet" type="text/css" href="design1.css">
 <style type="text/css">
-    
+        table {margin-left:100px}
          
          input{margin-right:300px;}
 </style>
@@ -68,22 +68,20 @@ $ftime = array
   <main class="mdl-layout__content">
     <div class="page-content"><!-- Your content goes here -->
     
-    <div class=jumbotron><br><br><h2><img src=logo_iit1.png class=small> B. Tech.</h2>
-    I<sup>st</sup> Year
-    </div>
+  
 
 <br>
 <br><br>
   <?php
-echo "<div class=tt><table><tr>";  
+echo "<div class=tt><table class=\"mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--2dp\"><tr>";  
   for($i=0;$i<9;$i++)
-    echo "<th>".$time[$i]."</th>";
+    echo "<th class=\"mdl-data-table__cell--non-numeric\">".$time[$i]."</th>";
    echo "</tr>";
 
   for($i=0;$i<5;$i++)
-    { echo "<tr><th>".$days[$i]."</th>";
+    { echo "<tr><th class=\"mdl-data-table__cell--non-numeric\">".$days[$i]."</th>";
       for($j=0;$j<8;$j++){
-        echo "<td>".$ftime[$i][$j]."</td>";
+        echo "<td class=\"mdl-data-table__cell--non-numeric\">".$ftime[$i][$j]."</td>";
       }
     echo "</tr>";
       
@@ -93,14 +91,16 @@ echo "<div class=tt><table><tr>";
   <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet"></div>
   <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet">
-  <b>Electives:</b><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="hselec">
-  <input type="checkbox" id="hselec" class="mdl-checkbox__input hselec">
-  <span class="mdl-checkbox__label">HS106</span>
+  
+<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="hselec">
+  <input type="checkbox" id="hselec" class="mdl-switch__input hselec">
+  <span class="mdl-switch__label">HS106</span>
 </label>
+
 </div>
   <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone"></div>
 </div>
-<b><i>Note:</i></b><ol>
+&nbsp;&nbsp;&nbsp;<b><i>Note:</i></b><ol>
 <li>Slots A3, B3, C3 and D3 are for 3 credit courses that can be used for core subjects.</li>
 <li>Slots A4, B4, C4, D4, E4, F4, G4 and I4 are for 4 credit elective courses, (used for core if needed).</li>
 <li>L1, L2, L3, L4, L5, L6, L7, L8, and L9 are the lab slots.</li>

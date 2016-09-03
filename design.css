@@ -1,25 +1,20 @@
-        
+        *{font-family:'Open Sans',sans-serif;}        
         a,a:hover,a:visited,a:link{text-decoration:none;color:black;}
         
-        tr,th,td {border:2px solid black;text-align: center;margin:0px;}
-         table{border-collapse: collapse;margin:0px;}
-        .A3,.A4,.A{background-color: #40B4F6;}
-        .B3,.B4,.B{background-color: #F19345;}
-        .C3,.C4,.C{background-color: #51FFF0;}
-        .D3,.D4,.D{background-color: #2AE783;}
-        .E3,.E4,.E{background-color: #91CCC0;}
-        .F3,.F4,.F{background-color: #B1FFF1;}
-        .G3,.G4,.G{background-color: #F0DDD0;}
-        .I3,.I4,.H{background-color: #FF2AAA;}
-        .L1{background-color: #40B4F6;}
-        .L2{background-color: #F19345;}
-        .L3{background-color: #51FFF0;}
-        .L4{background-color: #2AE783;}
-        .L5{background-color: #91CCC0;}
-        .L6{background-color: #B1FFF1;}
-        .L7{background-color: #F0DDD0;}
-        .L8{background-color: #A1FFA0;}
-        .L9{background-color: #C59F7F;}
+        tr,th,td{text-align: center;margin:0px;}
+			td,th{padding:7px;}
+		
+         table{margin:0px;}
+        
+        .L1{padding-left:15px;padding-right:15px;}
+        .L2{padding-left:15px;padding-right:15px;}
+        .L3{padding-left:15px;padding-right:15px;}
+        .L4{padding-left:15px;padding-right:15px;}
+        .L5{padding-left:15px;padding-right:15px;}
+        .L6{padding-left:15px;padding-right:15px;}
+        .L7{padding-left:15px;padding-right:15px;}
+        .L8{padding-left:15px;padding-right:15px;}
+        .L9{padding-left:15px;padding-right:15px;}
         
         .jumbotron{background-color:#00F4F4;color:;text-align: center;font-family:sans-serif;
         	background-image:radial-gradient(#00F4F4,#119191);}
@@ -27,9 +22,9 @@
           #clist {font-size:16px;}
   		  
          option {text-align:center;}
-         tr,td,th{font-size:20px;border:2px solid purple;}
+         tr,td,th{font-size:16px;}
          .small{width:15%;height:15%;}
-         .tt{border:17px solid green;border-radius: 15px;margin:auto;padding:0px;width:105%;}
+         .tt{margin:auto;padding:0px;width:70%;overflow:auto;}
          .mdl-navigation{color:black;}
          #headl{color:white;font-size:22px;}
 

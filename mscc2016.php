@@ -7,7 +7,7 @@
   <script type="text/javascript" src=content/js/bootstrap.min.js></script>
   <link rel="stylesheet" type="text/css" href="content/css/bootstrap.min.css">
   <script type="text/javascript" src=js/send.js></script>
-  <link rel="stylesheet" type="text/css" href="design.css">
+  <link rel="stylesheet" type="text/css" href="design1.css">
   <style type="text/css">
 
          .container1{background-image:url(mscc2016.png);width:100%;height:100%;background-repeat:no-repeat;margin-left:250px;}
@@ -47,19 +47,17 @@
     </nav>
   </div>
   <main class="mdl-layout__content">
-    <div class="page-content"><!-- Your content goes here --></div>
-  </main>
-</div>
-<br><br>
-  	<div class=jumbotron><h2><img src=logo_iit1.png class=small> M.Sc.</h2>
-  	M.Sc.(Chemistry) 2016,2015,M.Sc.(Applied Mathematics) 2016 Batch
-  	</div>
-  	<div class=container1>
+    <div class="page-content">
+    <div class=container1>
   </div>
   <div class=container2>
   </div>
   <div class=container3>
-  </div>
+  </div></div>
+  </main>
+</div>
+<br><br>
+  	
   
 
   </body>
