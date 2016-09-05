@@ -299,7 +299,7 @@ $('#demo').change(function(){
 			$('#crss').append("<span class=\"mdl-chip mdl-chip--deletable\" > <span class=\"mdl-chip__text\">"+copt+"</span><button type=\"button\" class=\"mdl-chip__action \" data="+slot+" contained="+copt+"><i class=\"material-icons\">cancel</i></button></span>");
 	var x=$("."+slot).not("option").html();
 	if(x!="") snackbarContainer.MaterialSnackbar.showSnackbar({message:'Clash Happened between '+x+' and '+copt+' '});
-	$("."+slot).not("option").html(""+copt);
+	$("."+slot).not("option").html("<span class=\"mdl-chip mdl-chip--deletable\" > <span class=\"mdl-chip__text\">"+copt+"</span><button type=\"button\" class=\"mdl-chip__action \" data="+slot+" contained="+copt+"><i class=\"material-icons\">cancel</i></button></span>");
 
 	'use strict';
     var copt=$('#demo option:selected').val()
@@ -318,7 +318,7 @@ $( document ).on( "click", "button", function() {
     // jQuery 1.7+
   var slot=$(this).attr('data');
   var copt=$(this).attr('contained');
-$("."+slot).not("option").html("");
+$(this).not("option").html("");
 //$("span[data="+slot+"]"]).html(" ");
 
   var snackbarContainer = document.querySelector('#demo-toast-example');
